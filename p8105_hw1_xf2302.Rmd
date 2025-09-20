@@ -17,5 +17,13 @@ data("early_january_weather")
 ```{r preview_data}
 head(early_january_weather)
 ```
+# Check the number of rows
+```{r check_rows}
+nrow(early_january_weather)
+```
+# Check the number of columns
+```{r check_cols}
+ncol(early_january_weather)
+```
 
 

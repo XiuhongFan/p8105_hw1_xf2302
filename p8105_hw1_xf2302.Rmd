@@ -13,5 +13,9 @@ library(ggplot2)
 ```{r load_data}
 data("early_january_weather")
 ```
+# Preview the initial rows of the dataset
+```{r preview_data}
+head(early_january_weather)
+```
 
 

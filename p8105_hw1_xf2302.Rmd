@@ -25,5 +25,7 @@ nrow(early_january_weather)
 ```{r check_cols}
 ncol(early_january_weather)
 ```
-
-
+# Calculate mean temperature without NA values
+```{r mean_temp}
+mean(early_january_weather$temp, na.rm = TRUE)
+```

@@ -13,20 +13,13 @@ library(ggplot2)
 ```{r load_data}
 data("early_january_weather")
 ```
-# Preview the initial rows of the dataset
-```{r preview_data}
-head(early_january_weather)
-```
-# Check the number of rows
-```{r check_rows}
-nrow(early_january_weather)
-```
-# Check the number of columns
-```{r check_cols}
-ncol(early_january_weather)
-```
-# Calculate mean temperature without NA values
-```{r mean_temp}
-mean(early_january_weather$temp, na.rm = TRUE)
-```
-Within the `early_january_weather` dataset, there are `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. Among the most relevant variables are *temperature*, *humidity*, and *time_hour*. The mean recorded temperature is about `r round(mean(early_january_weather$temp, na.rm = TRUE), 2)` degrees Fahrenheit.
+# Add dataset summary description using inline R
+Within the `early_january_weather` dataset, there are `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. Key variables include *temperature* (measured in °F), *humidity* (percentage of air moisture), and *time_hour* (timestamp for each observation). The mean recorded temperature is about `r round(mean(early_january_weather$temp, na.rm = TRUE), 2)` degrees Fahrenheit.
+
+
+
+
+
+
+
+

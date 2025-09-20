@@ -36,6 +36,20 @@ ggsave("scatterplot_temp_time.png", width = 7, height = 5)
 # Describe patterns
 The scatterplot of temperature (°F) against time_hour, colored by humidity, shows that temperature fluctuates between about 30°F and 55°F, with a mean near 39.6°F. Higher humidity values, indicated by cooler colors, are generally associated with lower temperatures, while lower humidity values align with warmer conditions. A clear cyclical pattern emerges over time, reflecting daily temperature increases during daytime and decreases at night.
 
+# Problem 2
+# Create a data frame with different variable types
+```{r}
+set.seed(123) # for reproducibility
+
+df = tibble(
+  norm_sample = rnorm(10),                          # numeric
+  above_zero  = rnorm(10) > 0,                      # logical
+  char_vec    = letters[1:10],                      # character
+  factor_vec  = factor(rep(c("low", "medium", "high"), length.out = 10)) # factor
+)
+
+df
+```
 
 
 

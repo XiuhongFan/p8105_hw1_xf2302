@@ -29,3 +29,4 @@ ncol(early_january_weather)
 ```{r mean_temp}
 mean(early_january_weather$temp, na.rm = TRUE)
 ```
+Within the `early_january_weather` dataset, there are `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. Among the most relevant variables are *temperature*, *humidity*, and *time_hour*. The mean recorded temperature is about `r round(mean(early_january_weather$temp, na.rm = TRUE), 2)` degrees Fahrenheit.

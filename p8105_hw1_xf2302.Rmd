@@ -50,7 +50,25 @@ df = tibble(
 
 df
 ```
+# Try taking the mean of each variable
+```{r, error=TRUE}
+# Numeric: mean works
+mean(df$norm_sample)
 
+# Logical: coerced to numeric (TRUE=1, FALSE=0), mean works
+mean(df$above_zero)
 
+# Character: cannot be averaged → error
+mean(df$char_vec)
 
+# Factor: cannot be averaged directly → error
+mean(df$factor_vec)
+```
+# Using tidyverse and pull()
+```{r}
+library(tidyverse)
+
+df %>% pull(norm_sample) %>% mean()
+df %>% pull(above_zero) %>% mean()
+```
 

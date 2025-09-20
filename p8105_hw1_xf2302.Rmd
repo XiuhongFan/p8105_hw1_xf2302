@@ -71,4 +71,9 @@ library(tidyverse)
 df %>% pull(norm_sample) %>% mean()
 df %>% pull(above_zero) %>% mean()
 ```
-
+# Convert variables to numeric
+```{r}
+as.numeric(df$above_zero)   # logical → numeric (TRUE=1, FALSE=0)
+as.numeric(df$char_vec)     # character → NA with warning
+as.numeric(df$factor_vec)   # factor → underlying integer codes
+```
